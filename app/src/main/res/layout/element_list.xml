@@ -6,18 +6,18 @@
     <Button
             android:layout_width="0dp"
             android:layout_height="75dp"
-            android:id="@+id/btnPerson" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btnItem" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" style="@style/Widget.AppCompat.Button.Borderless"
             android:onClick="onTogglePassword" android:textAlignment="textStart" tools:text="Luke Skywalker"
             android:textAllCaps="false" android:textSize="18sp" android:fontFamily="sans-serif-medium"
     />
     <ImageView
-            android:layout_width="59dp"
-            android:layout_height="57dp" app:srcCompat="@drawable/right_arrow"
+            android:layout_width="35dp"
+            android:layout_height="30dp" app:srcCompat="@drawable/right_arrow"
             android:id="@+id/imageView"
             android:scaleType="fitCenter"
-            app:layout_constraintTop_toTopOf="@+id/btnPerson" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnPerson" app:layout_constraintEnd_toEndOf="@+id/btnPerson"
-            android:layout_marginEnd="8dp" app:layout_constraintVertical_bias="0.7" android:contentDescription="TODO"/>
+            app:layout_constraintTop_toTopOf="@+id/btnItem" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnItem" app:layout_constraintEnd_toEndOf="@+id/btnItem"
+            android:layout_marginEnd="8dp" app:layout_constraintVertical_bias="0.7" android:contentDescription="@string/todo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Button
 import com.odella.starwars.R
-import com.odella.starwars.POJO.Person
+import com.odella.starwars.POJO.Planet
 
-
-class PersonAdapter(var context: Context, var people: List<Person>) : BaseAdapter() {
+class PlanetAdapter(var context: Context, var planets: List<Planet>) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
@@ -20,21 +19,21 @@ class PersonAdapter(var context: Context, var people: List<Person>) : BaseAdapte
         if(convertView == null){
             personView = LayoutInflater.from(context).inflate(R.layout.element_list, null)
             holder = ViewHolder()
-            holder.personName = personView.findViewById(R.id.btnItem)
+            holder.name = personView.findViewById(R.id.btnItem)
             personView.tag = holder
         } else {
             holder = convertView.tag as ViewHolder
             personView = convertView
         }
 
-        val person = people[position]
-        holder.personName?.text = person.name
+        val person = planets[position]
+        holder.name?.text = person.name
         return personView
 
     }
 
     override fun getItem(position: Int): Any {
-        return people[position]
+        return planets[position]
     }
 
     override fun getItemId(position: Int): Long {
@@ -42,10 +41,10 @@ class PersonAdapter(var context: Context, var people: List<Person>) : BaseAdapte
     }
 
     override fun getCount(): Int {
-        return people.count()
+        return planets.count()
     }
 
     private class ViewHolder(){
-        var personName: Button? = null
+        var name: Button? = null
     }
 }
