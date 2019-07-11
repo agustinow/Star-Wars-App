@@ -8,13 +8,13 @@
             android:label="@string/app_name"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Controller.InfoActivity">
+        <activity android:name=".Controller.InfoActivity" android:configChanges="keyboardHidden|orientation|screenSize">
         </activity>
-        <activity android:name=".Controller.ListActivity">
+        <activity android:name=".Controller.ListActivity" android:configChanges="keyboardHidden|orientation|screenSize">
         </activity>
-        <activity android:name=".Controller.SelectActivity">
+        <activity android:name=".Controller.SelectActivity" android:configChanges="keyboardHidden|orientation|screenSize">
         </activity>
-        <activity android:name=".Controller.MainActivity">
+        <activity android:name=".Controller.MainActivity" android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
